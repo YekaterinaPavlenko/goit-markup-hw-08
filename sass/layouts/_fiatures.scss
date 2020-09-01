@@ -1,0 +1,28 @@
+.box.features {
+  padding-bottom: 0;
+}
+
+.img-box {
+  padding: 25px 100px;
+  margin-bottom: 30px;
+  background-color: $secodary-bcg-color;
+  border-radius: 4px;
+}
+
+.features-title {
+  color: $title-text-color;
+  margin: 0;
+  margin-bottom: 10px;
+
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.features-text {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}

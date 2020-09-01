@@ -1,0 +1,81 @@
+/*Общие стили*/
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+  background-color: $primary-white-color;
+  color: $primary-text-color;
+  font-family: $font-primary;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+}
+
+.border {
+  border: 1px solid #ececec;
+}
+
+.conteiner {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*Общие стили для секций*/
+
+.box {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.list-box {
+  display: flex;
+  justify-content: center;
+}
+
+.item-box {
+  width: calc((100% - 30px * 3) / 4);
+  margin-right: 30px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.section-title {
+  margin: 0;
+  margin-bottom: 50px;
+  color: $title-text-color;
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
