@@ -4,23 +4,43 @@
 }
 
 .footer-conteiner {
-  display: flex;
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1599px) {
+    flex-wrap: wrap;
+  }
 }
 
 .f-box-one {
-  width: calc((100% - (30px + 15px)) / 4);
+  width: 100%;
   padding-top: 60px;
-  padding-bottom: 60px;
-  margin-right: 30px;
+
+  @media screen and (max-width: 1599px) {
+    text-align: center;
+  }
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 2 * 30px) / 2);
+    margin: 0 auto;
+  }
+
+  @media screen and (min-width: 1600px) {
+    width: calc((100% - (30px + 15px)) / 4);
+    margin: 0 30px 0 0;
+    padding-bottom: 60px;
+  }
 }
 
 .logo.footer {
+  // text-align: center;
   color: $primary-white-color;
   margin-top: 0;
   margin-bottom: 20px;
 }
 
 .address-text {
+  // text-align: center;
   font-family: $font-primary;
   font-style: normal;
   font-size: 14px;
@@ -29,6 +49,7 @@
 }
 
 .address-text a {
+  // text-align: center;
   color: rgba(255, 255, 255, 0.6);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -39,13 +60,21 @@
 }
 
 .f-box-two {
-  width: calc((100% - 15px) / 2);
   padding-top: 60px;
-  padding-bottom: 94px;
+
+  @media screen and (max-width: 1599px) {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 60px;
+  }
+
+  @media screen and (min-width: 1600px) {
+    width: calc((100% - 15px) / 2);
+    padding-bottom: 94px;
+  }
 }
 
 .bold {
-  display: inline-block;
   margin-top: 12px;
   font-weight: 700;
   font-size: 14px;
@@ -56,6 +85,9 @@
 
 .f-socials {
   display: flex;
+  @media screen and (max-width: 1599px) {
+    justify-content: center;
+  }
   margin-top: 20px;
 }
 

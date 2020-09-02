@@ -30,47 +30,75 @@ p {
 img {
   display: block;
 }
-
-.border {
-  border: 1px solid #ececec;
+* {
+  outline: 1px solid green;
 }
-
-.conteiner {
-  width: 1200px;
-  margin: 0 auto;
-  padding: 0 15px;
-}
-
 .list {
   list-style: none;
   margin: 0;
   padding: 0;
 }
+.conteiner {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+
+  @media screen and (min-width: 480px) {
+    width: 480px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 768px;
+  }
+
+  @media screen and (min-width: 1600px) {
+    width: 1200px;
+  }
+}
 
 /*Общие стили для секций*/
 
 .box {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @media screen and (min-width: 1600px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
-.list-box {
-  display: flex;
-  justify-content: center;
+@media screen and (min-width: 768px) {
+  .list-box {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
 }
-
 .item-box {
-  width: calc((100% - 30px * 3) / 4);
+  width: 100%;
   margin-right: 30px;
+  margin-top: 30px;
 
-  &:last-child {
-    margin-right: 0;
+  @media screen and (min-width: 768px) and (max-width: 1599px) {
+    width: calc((100% - 30px) / 2);
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+  }
+
+  @media screen and (min-width: 1600px) {
+    width: calc((100% - 30px * 3) / 4);
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
 }
 
 .section-title {
   margin: 0;
-  margin-bottom: 50px;
   color: $title-text-color;
 
   font-weight: 700;

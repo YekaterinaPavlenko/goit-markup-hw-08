@@ -1,15 +1,25 @@
 .box.features {
-  padding-bottom: 0;
+  padding-top: 30px;
+
+  @media screen and (min-width: 1600px) {
+    padding-top: 64px;
+  }
 }
 
 .img-box {
-  padding: 25px 100px;
+  padding: 25px 1px;
   margin-bottom: 30px;
   background-color: $secodary-bcg-color;
   border-radius: 4px;
 }
 
+.features-img {
+  display: block;
+  margin: auto;
+}
+
 .features-title {
+  text-align: center;
   color: $title-text-color;
   margin: 0;
   margin-bottom: 10px;
