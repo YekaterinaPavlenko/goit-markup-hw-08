@@ -8,7 +8,7 @@
     display: flex;
   }
 
-  @media screen and (min-width: 768px) and (max-width: 1599px) {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
     flex-wrap: wrap;
   }
 }
@@ -17,7 +17,7 @@
   width: 100%;
   padding-top: 60px;
 
-  @media screen and (max-width: 1599px) {
+  @media screen and (max-width: 1199px) {
     text-align: center;
   }
   @media screen and (min-width: 768px) {
@@ -25,7 +25,7 @@
     margin: 0 auto;
   }
 
-  @media screen and (min-width: 1600px) {
+  @media screen and (min-width: 1200px) {
     width: calc((100% - (30px + 15px)) / 4);
     margin: 0 30px 0 0;
     padding-bottom: 60px;
@@ -62,13 +62,13 @@
 .f-box-two {
   padding-top: 60px;
 
-  @media screen and (max-width: 1599px) {
+  @media screen and (max-width: 1199px) {
     width: 100%;
     text-align: center;
     padding-bottom: 60px;
   }
 
-  @media screen and (min-width: 1600px) {
+  @media screen and (min-width: 1200px) {
     width: calc((100% - 15px) / 2);
     padding-bottom: 94px;
   }
@@ -85,7 +85,7 @@
 
 .f-socials {
   display: flex;
-  @media screen and (max-width: 1599px) {
+  @media screen and (max-width: 1199px) {
     justify-content: center;
   }
   margin-top: 20px;

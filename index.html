@@ -20,39 +20,60 @@
       <div class="conteiner">
         <div class="header">
           <nav class="navigation">
-            <a href="./index.html">
+            <a href="./index.html" class="logo-link">
               <p class="logo"><span class="logo-color">Web</span>Studio</p>
             </a>
-            <ul class="list nav">
-              <li class="nav-item">
-                <a href="./index.html" class="nav-link current">Студия</a>
-              </li>
-              <li class="nav-item">
-                <a href="./portfolio.html" class="nav-link">Портфолио</a>
-              </li>
-              <li class="nav-item"><a href="" class="nav-link">Контакты</a></li>
-            </ul>
+            <button
+              type="button"
+              class="menu-btn is-open"
+              aria-label="переключатель мобильного меню"
+              aria-controls="menu-conteiner"
+              aria-expanded="true"
+              data-menu-button
+            >
+              <svg width="40" height="40" class="close-icon">
+                <use
+                  class="icon-cross"
+                  href="./images/sprite-icon.svg#close_40px"
+                ></use>
+                <use
+                  class="icon-menu"
+                  href="./images/sprite-icon.svg#menu_40px"
+                ></use>
+              </svg>
+            </button>
+            <div class="menu-conteiner is-open" id="menu-conteiner" data-menu>
+              <ul class="list nav">
+                <li class="nav-item">
+                  <a href="./index.html" class="nav-link current">Студия</a>
+                </li>
+                <li class="nav-item">
+                  <a href="./portfolio.html" class="nav-link">Портфолио</a>
+                </li>
+                <li class="nav-item">
+                  <a href="" class="nav-link">Контакты</a>
+                </li>
+              </ul>
+              <ul class="list contact">
+                <li class="contact-item">
+                  <a href="mailto:info@devstudio.com" class="link-contact">
+                    <svg class="nav-smartphone" width="16" height="12">
+                      <use href="./images/sprite-icon.svg#envelope"></use>
+                    </svg>
+                    info@devstudio.com
+                  </a>
+                </li>
+                <li class="contact-item">
+                  <a href="tel:+380961111111" class="link-contact">
+                    <svg class="nav-smartphone" width="10" height="16">
+                      <use href="./images/sprite-icon.svg#smartphone"></use>
+                    </svg>
+                    +38 096 111 11 11
+                  </a>
+                </li>
+              </ul>
+            </div>
           </nav>
-          <address class="address">
-            <ul class="list contact">
-              <li class="contact-item">
-                <a href="mailto:info@devstudio.com" class="link-contact">
-                  <svg class="nav-smartphone" width="16" height="12">
-                    <use href="./images/sprite-icon.svg#envelope"></use>
-                  </svg>
-                  info@devstudio.com
-                </a>
-              </li>
-              <li class="contact-item">
-                <a href="tel:+380961111111" class="link-contact">
-                  <svg class="nav-smartphone" width="10" height="16">
-                    <use href="./images/sprite-icon.svg#smartphone"></use>
-                  </svg>
-                  +38 096 111 11 11
-                </a>
-              </li>
-            </ul>
-          </address>
         </div>
       </div>
     </header>
@@ -132,7 +153,8 @@
             <ul class="list list-box">
               <li class="example-box">
                 <img
-                  src="./images/chmz-leptop.jpg"
+                  src="./images/chmz/leptop.jpg"
+                  srcset="./images/chmz/leptop@2x.jpg 2x"
                   alt="ноутбук на столе"
                   width="370"
                   height="294"
@@ -143,7 +165,8 @@
               </li>
               <li class="example-box">
                 <img
-                  src="./images/chmz-mobile.jpg"
+                  src="./images/chmz/mobile.jpg"
+                  srcset="./images/chmz/mobile@2x.jpg 2x"
                   alt="мобильный телефон"
                   width="370"
                   height="294"
@@ -154,8 +177,9 @@
               </li>
               <li class="example-box">
                 <img
-                  src="./images/chmz-design.jpg"
-                  alt="монитор"
+                  src="./images/chmz/design.jpg"
+                  srcset="./images/chmz/design@2x.jpg 2x"
+                  alt="дизайн приложения"
                   width="370"
                   height="294"
                 />
@@ -174,12 +198,33 @@
             <h2 class="section-title">Наша команда</h2>
             <ul class="list list-box">
               <li class="item-box team-box">
-                <img
-                  src="./images/team-igor.jpg"
-                  alt="фото продукт дизайнера"
-                  width="270"
-                  height="260"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/team/team-phone-igor.jpg    1x,
+                      ./images/team/team-phone-igor@2x.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/team/team-tablet-igor.jpg    1x,
+                      ./images/team/team-tablet-igor@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/team/team-desktop-igor.jpg    1x,
+                      ./images/team/team-desktop-igor@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <img
+                    src="./images/team/team-desktop-igor.jpg"
+                    alt="фото продукт дизайнера"
+                  />
+                </picture>
                 <h3 class="team-title">Игорь Демьяненко</h3>
                 <p lang="en" class="team-text">Product Designer</p>
                 <ul class="list social-list">
@@ -238,12 +283,33 @@
                 </ul>
               </li>
               <li class="item-box team-box">
-                <img
-                  src="./images/team-olga.jpg"
-                  alt="фото разработчика"
-                  width="270"
-                  height="260"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/team/team-phone-olga.jpg    1x,
+                      ./images/team/team-phone-olga@2x.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/team/team-tablet-olga.jpg    1x,
+                      ./images/team/team-tablet-olga@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/team/team-desktop-olga.jpg    1x,
+                      ./images/team/team-desktop-olga@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <img
+                    src="./images/team/team-desktop-olga.jpg"
+                    alt="фото разработчика"
+                  />
+                </picture>
                 <h3 class="team-title">Ольга Репина</h3>
                 <p lang="en" class="team-text">Frontend Developer</p>
                 <ul class="list social-list">
@@ -302,12 +368,33 @@
                 </ul>
               </li>
               <li class="item-box team-box">
-                <img
-                  src="./images/team-nikolay.jpg"
-                  alt="фото маркетолога"
-                  width="270"
-                  height="260"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/team/team-phone-nikolay.jpg    1x,
+                      ./images/team/team-phone-nikolay@2x.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/team/team-tablet-nikolay.jpg    1x,
+                      ./images/team/team-tablet-nikolay@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/team/team-desktop-nikolay.jpg    1x,
+                      ./images/team/team-desktop-nikolay@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <img
+                    src="./images/team/team-desktop-nikolay.jpg"
+                    alt="фото маркетолога"
+                  />
+                </picture>
                 <h3 class="team-title">Николай Тарасов</h3>
                 <p lang="en" class="team-text">Marketing</p>
                 <ul class="list social-list">
@@ -366,12 +453,33 @@
                 </ul>
               </li>
               <li class="item-box team-box">
-                <img
-                  src="./images/team-mihail.jpg"
-                  alt="фото"
-                  width="270"
-                  height="260"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/team/team-phone-mikhail.jpg    1x,
+                      ./images/team/team-phone-mikhail@2x.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/team/team-tablet-mikhail.jpg    1x,
+                      ./images/team/team-tablet-mikhail@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/team/team-desktop-mikhail.jpg    1x,
+                      ./images/team/team-desktop-mikhail@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <img
+                    src="./images/team/team-desktop-mikhail.jpg"
+                    alt="фото"
+                  />
+                </picture>
                 <h3 class="team-title">Михаил Ермаков</h3>
                 <p lang="en" class="team-text">UI Designer</p>
                 <ul class="list social-list">
@@ -636,5 +744,6 @@
       </div>
     </div>
     <script src="./modal.js"></script>
+    <script src="./menu-phone.js"></script>
   </body>
 </html>
