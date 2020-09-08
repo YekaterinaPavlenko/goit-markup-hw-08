@@ -1100,6 +1100,12 @@ img {
   border-radius: 4px;
 }
 
+@media screen and (max-width: 450px) {
+  .modal {
+    min-width: 100%;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .modal {
     min-width: 528px;
