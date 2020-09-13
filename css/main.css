@@ -608,6 +608,7 @@ img {
 }
 
 .hero {
+  min-height: 400px;
   margin: 0 auto;
   background-color: rgba(47, 48, 58, 0.8);
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero/hero-phone-img.jpg);
