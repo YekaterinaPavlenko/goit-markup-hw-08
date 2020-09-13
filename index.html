@@ -25,10 +25,10 @@
             </a>
             <button
               type="button"
-              class="menu-btn is-open"
+              class="menu-btn"
               aria-label="переключатель мобильного меню"
               aria-controls="menu-conteiner"
-              aria-expanded="true"
+              aria-expanded="false"
               data-menu-button
             >
               <svg width="40" height="40" class="close-icon">
@@ -42,7 +42,7 @@
                 ></use>
               </svg>
             </button>
-            <div class="menu-conteiner is-open" id="menu-conteiner" data-menu>
+            <div class="menu-conteiner" id="menu-conteiner" data-menu>
               <ul class="list nav">
                 <li class="nav-item">
                   <a href="./index.html" class="nav-link current">Студия</a>
@@ -82,7 +82,7 @@
       <section class="hero">
         <div class="conteiner hero-box">
           <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-          <button class="button primary" data-modal-open>
+          <button class="button-primary" data-modal-open>
             Заказать услугу
           </button>
         </div>
@@ -675,7 +675,7 @@
               class="footer-input"
               placeholder="E-mail"
             />
-            <button type="submit" class="button primary footer-button">
+            <button type="submit" class="button-primary footer-button">
               Подписаться
             </button>
           </form>
@@ -719,7 +719,7 @@
               class="input-box comment"
               name="comment"
               rows="5"
-              cols="45"
+              cols=""
               placeholder="Введите текст"
             ></textarea>
           </label>
@@ -737,7 +737,7 @@
               <a href="" class="contract">Условия договора</a>
             </p>
           </label>
-          <button type="submit" class="button primary btn-send">
+          <button type="submit" class="button-primary btn-send">
             Отправить
           </button>
         </form>
